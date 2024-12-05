@@ -3,9 +3,53 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. Khimji's Blog</title>
+    <title>Blog | Dr. Khimji</title>
   </head>
   <body>
-    <h1>Dr. Khimji's Blog</h1>
+    <!-- Navigation bar -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li>Blog</li>
+          <li><a href="index.html#contact-form">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Blog List -->
+    <section id="blog-list">
+      <h2>Blog Posts</h2>
+      <div class="blog-posts">
+
+        <article>
+          <a href="/blog-posts/what-is-lifestyle-medicine.html">
+            <img src="/assets/images/blog-posts/what-is-lifestyle-medicine/featured-image.jpg" width="400">
+            <h3>What is lifestyle medicine?</h3>
+          </a>
+        </article>
+
+        <article>
+          <a href="/blog-posts/is-this-blog-for-you.html">
+            <img src="assets/images/blog-posts/is-this-blog-for-you/featured-image.jpg" width="400">
+            <h3>Is this blog for you?</h3>
+          </a>
+        </article>
+
+        <article>
+          <a href="/blog-posts/nutrition-the-first-pillar-of-lifestyle-medicine.html">
+            <img src="/assets/images/blog-posts/nutrition-the-first-pillar-of-lifestyle-medicine/featured-image.jpg" width="400">
+            <h3>Nutrition: The first pillar of lifestyle medicine</h3>
+          </a>
+        </article>
+
+        <!-- Form to sign up for blog post reminders -->
+        <form action="#" method="POST">
+          <label for="email-signup">Sign up to receive new blog post notifications:</label>
+          <input type="email" id="email-signup" name="email" placeholder="Enter your email" required>
+          <button type="submit">Sign up</button>
+        </form>
+      </div>
+    </section>
   </body>
 </html>
