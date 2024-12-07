@@ -1,0 +1,42 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "What is lifestyle medicine?",
+      "slug": "what-is-lifestyle-medicine",
+      "date": "need to fill",
+      "content_file": "need to fill",
+      "read_time": "3 min",
+      "categories": ["general"],
+      "images": [
+        "/images/blog-posts/what-is-lifestyle-medicine-feature.jpg"
+      ]
+    },
+
+    {
+      "id": "2",
+      "title": "Is this blog for you?",
+      "slug": "is-this-blog-for-you",
+      "date": "need to fill",
+      "content_file": "need to fill",
+      "read_time": "3 min",
+      "categories": ["general"],
+      "images": [
+        "/images/blog-posts/is-this-blog-for-you-feature.jpg"
+      ]
+    },
+
+    {
+      "id": "3",
+      "title": "Nutrition: The first pillar of Lifestyle Medicine",
+      "slug": "nutrition-the-first-pillar-of-lifestyle-medicine",
+      "date": "need to fill",
+      "content_file": "need to fill",
+      "read_time": "3 min",
+      "categories": ["nutrition"],
+      "images": [
+        "/images/blog-posts/nutrition-the-first-pillar-of-lifestyle-medicine-feature.jpg"
+      ]
+    }
+  ]
+}
