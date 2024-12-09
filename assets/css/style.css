@@ -1,7 +1,9 @@
-/* Header and Navigation */
 
 body {
-  margin: 0;
+  background-color: red;
+  max-width: 1024px;
+  margin: 0px;
+
 }
 
 header {
@@ -10,13 +12,14 @@ header {
   z-index: 1000;
   background-color: #6a4c9c;
   padding: 20px 0;
+  padding-right: 10px;
   display: flex;
   justify-content: space-between;
 }
 
-header a {
-  padding-left: 20px;
+header > a {
   font-size: 24px;
+  margin-left: 20px;
   color: #ffffff;
   text-decoration: none;
 }
@@ -26,10 +29,8 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-}
-
-nav ul li {
-  margin: 0 20px;
+  justify-content: space-between;
+  gap: 10px;
 }
 
 nav ul li a {

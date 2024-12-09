@@ -14,6 +14,14 @@ Blog post images are labeled with the post title to help with SEO. Apparently se
 
 `-feature` was added to the main image of each post incase future posts have have multiple images. This keeps things consistent and apparently also helps SEO.
 
+Screen breakpoints:
+- <= 768px: Mobile desigh
+- <= 1024px: Tablets
+- >1024px: desktops.
+
+I am going to cap the width at 1024px so readers don't have pan their head when reading the website.
+
+
 Questions/comments for Hussain:
 
 1. Do you want to collect names as well? Might add more friction when getting signups. One benefit of this would be to send personalized emails when you email people. Is this necessary?
