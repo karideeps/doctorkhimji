@@ -1,10 +1,11 @@
-body, section, figure, h1, h2, p, #certification-logos {
+body, section, figure, h1, h2, p, ul, ol, form, #certification-logos {
   border: 1px solid #ccc;
 }
 
 body {
   max-width: 1024px;
   margin: 0 auto;
+  font-size: 1.5rem;
 }
 
 header {
@@ -20,7 +21,6 @@ header {
 }
 
 header > a {
-  font-size: 24px;
   margin-left: 20px;
   color: #ffffff;
   text-decoration: none;
@@ -38,7 +38,6 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 18px;
   padding: 8px 12px;
   border-radius: 5px;
   transition:
@@ -82,10 +81,59 @@ figure {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 h1, h2 {
   text-align: center;
 }
 
+/*
+  Below is to make it so that the user does not need to move their eyes too much horizontally when reading.
+*/
+p {
+max-width: 768px;
+margin: 0 auto;
+padding: 20px;
+}
+
+ol {
+  max-width: 768px;
+  margin: 0 auto;
+  list-style-position: inside;
+}
+
+.latest-blog-posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+article h3 {
+  max-width: 400px;
+  text-align: center;
+}
+
+#homepage-blog p {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+/*
+  Below is to have the label to sign up for the block on its own line.
+*/
+#homepage-blog form label {
+  display: block;
+}
+
+/*
+  Below is to center the instagram feed.
+  The blockqoute somehow gets converted into an i-frame.
+*/
+iframe {
+  margin: auto !important;
+}

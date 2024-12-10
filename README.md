@@ -21,6 +21,7 @@ Screen breakpoints:
 
 I am going to cap the width at 1024px so readers don't have pan their head when reading the website.
 
+For any text fields, I limited the size to 768px so users don't have to scroll their eyes too much when they read.
 
 Questions/comments for Hussain:
 
