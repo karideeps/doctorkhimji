@@ -1,11 +1,15 @@
-body, section, figure, h1, h2, p, ul, ol, form, #certification-logos {
+body, section, figure, h1, h2, p, ul, ol, form, dl, dd, dt, #certification-logos {
   border: 1px solid #ccc;
 }
+
+/* h2 {
+  display: none;
+} */
 
 body {
   max-width: 1024px;
   margin: 0 auto;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 header {
@@ -119,15 +123,13 @@ article h3 {
   text-align: center;
 }
 
+/*
+  Meant for blog sign up forms on main page and blog page
+*/
+
 form {
   text-align: center;
-}
-
-/*
-  Below is to have the label to sign up for the block on its own line.
-*/
-#homepage-blog form label {
-  display: block;
+  margin: 10px;
 }
 
 /*
@@ -136,4 +138,45 @@ form {
 */
 iframe {
   margin: auto !important;
+}
+
+/*
+  Center map in the middle of the middle of the Work With Me section.
+*/
+#work-with-me {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  gap: 5px;
+}
+
+#contact-form form input {
+  margin: auto;
+  max-width: 350px;
+  width: 100%;
+}
+
+#contact-form form textarea {
+  margin: auto;
+  max-width: 350px;
+  width: 100%;
+}
+
+#contact-form button {
+  padding: 10px;
+  width: 75px;
+  margin: auto;
+}
+
+/* blog.html styling */
+
+.blog-posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
