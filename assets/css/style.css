@@ -1,4 +1,4 @@
-body, section, figure, h1, h2, p, ul, ol, form, dl, dd, dt, #certification-logos {
+body, section, figure, h1, h2, p, ul, ol, form, dl, dd, dt, #certification-logos, .navigation {
   border: 1px solid #ccc;
 }
 
@@ -96,15 +96,17 @@ h1, h2 {
   Below is to make it so that the user does not need to move their eyes too much horizontally when reading.
 */
 p {
-max-width: 768px;
-margin: 0 auto;
-padding: 20px;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 ol {
   max-width: 768px;
   margin: 0 auto;
   list-style-position: inside;
+  box-sizing: border-box;
 }
 
 .latest-blog-posts {
@@ -179,4 +181,36 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+/* Center image(s) in each blog post */
+
+article img {
+  display: block; 
+  margin: auto;
+}
+
+/* Navigation styling for each blog post */
+.navigation {
+  box-sizing: border-box;
+  max-width: 768px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.navigation a {
+  padding: 20px 10px;
+  background-color: lightpink;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+/* Hide previous button on the first blog post */
+.hidden {
+  visibility: hidden;
 }
