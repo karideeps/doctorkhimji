@@ -30,7 +30,7 @@ header > a {
   text-decoration: none;
 }
 
-nav ul {
+header nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -39,7 +39,7 @@ nav ul {
   gap: 10px;
 }
 
-nav ul li a {
+header nav ul li a {
   text-decoration: none;
   color: #ffffff;
   padding: 8px 12px;
@@ -49,17 +49,17 @@ nav ul li a {
     color: 0.3s;
 }
 
-nav ul li.logo a {
+header nav ul li.logo a {
   font-size: 24px;
 }
 
-nav ul li a:hover {
+header nav ul li a:hover {
   background-color: #f4e05d;
   border-radius: 5px;
   color: #5e4b8b;
 }
 
-nav ul li a.active {
+header nav ul li a.active {
   background-color: #f4e05d;
   border-radius: 5px;
   color: #5e4b8b;
@@ -213,4 +213,20 @@ article img {
 /* Hide previous button on the first blog post */
 .hidden {
   visibility: hidden;
+}
+
+/* Footer */
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+.footer-nav-social li {
+  display: inline-block; /* Social Media links on the same line */
 }

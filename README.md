@@ -10,20 +10,7 @@ The 7 categories for blog posts will correspond with the six pillars of lifestyl
 6. Social Connection                      - `"social"`
 7. Avoidance of Risky Substances          - `"risky-substances"`
 
-Blog post images are labeled with the post title to help with SEO. Apparently search engines like it when the image has a descriptive name as opposed to something less descriptive. "what-is-lifestyle-medicine-feature.jpg" vs "post-image-1.jpg"
-
-`-feature` was added to the main image of each post incase future posts have have multiple images. This keeps things consistent and apparently also helps SEO.
-
-Screen breakpoints:
-- <= 768px: Mobile desigh
-- <= 1024px: Tablets
-- >1024px: desktops.
-
-I am going to cap the width at 1024px so readers don't have pan their head when reading the website.
-
-For any text fields, I limited the size to 768px so users don't have to scroll their eyes too much when they read.
-
-Questions/comments for Hussain:
+## Questions/comments for Hussain:
 
 1. Do you want to collect names as well? Might add more friction when getting signups. One benefit of this would be to send personalized emails when you email people. Is this necessary?
 2. Categories
