@@ -1,7 +1,4 @@
-/* 
-Eric Meyer's reset.
-*/
-
+/* Eric Meyer's reset start. */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,12 +42,18 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+/* Eric Meyer's reset end. */
+
+/* Border to visualize containers */
+header, h1, nav {
+  border: 1px solid black;
+}
 
 /* Grid layout for body */
 body {
   display: grid;
   grid-template-rows: 75px 1fr 200px;
-  grid-template-columns: 1fr 768px 1fr;
+  grid-template-columns: 1fr minmax(auto, 768px) 1fr;
   grid-template-areas: 
     "header header header"
     "sidebar1 main sidebar2"
@@ -72,24 +75,22 @@ footer {
 /* Grid layout for header */
 header {
   display: grid;
-  grid-template-columns: 1fr minmax(200px, 512px) minmax(200px, 512px) 1fr;
+  grid-template-columns: 1fr minmax(0px, 1024px) 1fr;
   align-items: center;
   grid-template-areas:
-    ". logo nav ."
+    ". content ."
 }
 
 header h1 {
-  grid-area: logo;
+  grid-area: content;
+  justify-self: left;
+  padding-left: 10px;
 }
 
 header nav {
-  grid-area: nav;
-  justify-self: end;
-}
-
-/* Header logo and navigation bar on the same line */
-header > * {
-  display: inline-block;
+  grid-area: content;
+  justify-self: right;
+  padding-right: 10px;
 }
 
 /* Header navigation list items on the same line */
