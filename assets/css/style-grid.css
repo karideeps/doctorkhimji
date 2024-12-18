@@ -45,9 +45,9 @@ table {
 /* Eric Meyer's reset end. */
 
 /* Border to visualize containers */
-header, h1, nav, p, footer {
+/* header, h1, nav, p, footer, section {
   border: 1px solid black;
-}
+} */
 
 /* Enable smooth scrolling */
 html {
@@ -65,7 +65,7 @@ body {
     "footer";
 }
 
-/* Grid layout for header */
+/* Header */
 header {
   grid-area: header;
   display: grid;
@@ -87,12 +87,11 @@ header nav {
   margin-right: 10px;
 }
 
-/* Header navigation list items on the same line */
 .header-nav-main li {
-  display: inline-block;
+  display: inline-block; /* Header navigation list items on the same line */
 }
 
-/* Grid layout for footer */
+/* Footer */
 footer {
   grid-area: footer;
   display: grid;
@@ -113,9 +112,8 @@ footer nav {
   margin-left: 50px;
 }
 
-/* Social links on the same line */
 .footer-nav-social li {
-  display: inline-block;
+  display: inline-block; /* Footer social links on the same line */
 }
 
 .footer-nav-main {
@@ -129,7 +127,7 @@ footer p {
   align-self: top;
 }
 
-/* Grid for main section */
+/* Main */
 main {
   grid-area: main;
   display: grid;
@@ -142,33 +140,93 @@ main {
     ". homepage-blog ."
     ". instagram-feed ."
     ". work-with-me ."
-    ". contact-form ."
+    ". contact-form .";
+  place-items: center;
 }
 
+/* Introduction section */
 .section-introduction {
   grid-area: introduction;
+  display: grid;
+  place-items: center;
 }
 
+.section-introduction figure {
+  text-align: center;
+}
+
+/* Certifications section */
 .section-certifications {
   grid-area: certifications;
+  display: grid;
+  grid-template-rows: auto 75px;
+  grid-template-columns: auto auto auto;
+  grid-template-areas:
+    "heading heading heading"
+    "logo1 logo2 logo3";
+  place-items: center;
+  column-gap: 20px;
 }
 
+.section-certifications h2 {
+  grid-area: heading;
+}
+
+/* Bio section */
 .section-bio {
   grid-area: bio;
+  text-align: center;
+}
+
+/* Blog section */
+.section-homepage-blog {
+  grid-area: homepage-blog;
+  display: grid;
+  grid-template-rows: 25px 300px 300px 25px 50px;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    "heading heading"
+    "article1 article2"
+    "article3 article4"
+    "allposts allposts"
+    "form form";
+  gap: 20px;
+}
+
+.section-homepage-blog h2 {
+  grid-area: heading;
+}
+
+.section-homepage-blog p {
+  grid-area: allposts;
+}
+
+.section-homepage-blog form {
+  grid-area: form;
 }
 
 .section-homepage-blog {
-  grid-area: homepage-blog;
+  text-align: center;
 }
 
+/* Instagram feed section */
 .section-instagram-feed {
   grid-area: instagram-feed;
 }
 
+/* Work with me section */
 .section-work-with-me {
   grid-area: work-with-me;
 }
 
+/* Contact Us section */
 .section-contact-form {
   grid-area: contact-form;
+  display: grid;
+  text-align: center;
+}
+
+.section-contact-form form {
+  display: grid;
+  place-items: center;
 }
