@@ -45,9 +45,9 @@ table {
 /* Eric Meyer's reset end. */
 
 /* Border to visualize containers */
-/* header, h1, nav, p, footer, section {
+header, h1, nav, p, footer, section {
   border: 1px solid black;
-} */
+}
 
 /* Enable smooth scrolling */
 html {
@@ -127,9 +127,14 @@ footer p {
   align-self: top;
 }
 
-/* Main */
+/* Global main styles */
+
 main {
   grid-area: main;
+}
+
+/* Homepage main */
+.home main {
   display: grid;
   grid-template-rows: repeat(10, auto);
   grid-template-columns: 1fr minmax(0px, 728px) 1fr;
@@ -229,4 +234,81 @@ main {
 .section-contact-form form {
   display: grid;
   place-items: center;
+}
+
+/* Blog page main */
+.blog-index main {
+  display: grid;
+  grid-template-columns: 1fr minmax(0px, 728px) 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    ". title ."
+    ". form ."
+    ". posts .";
+  place-items: center;
+}
+
+.blog-index h2 {
+  grid-area: title;
+}
+
+.blog-index form {
+  grid-area: form;
+}
+
+.section-blog-page-articles {
+  grid-area: posts;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.blog-index h3 {
+  text-align: center;
+}
+
+/* Blog post main */
+.blog-post main {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 768px) 1fr;
+  grid-template-areas:
+    ". article ."
+    ". nav .";
+  row-gap: 20px;
+  }
+
+.blog-post main article {
+  grid-area: article;
+}
+
+.blog-post main article h1 {
+  text-align: center;
+}
+
+.blog-post main article figure {
+  text-align: center;
+}
+
+.blog-post main article ol {
+  list-style-position: inside;
+  list-style-type: decimal;
+}
+
+.blog-post main nav {
+  grid-area: nav;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.blog-post main nav a:first-child {
+  justify-self: left;
+}
+
+.blog-post main nav a:nth-child(2) {
+  justify-self: right;
+}
+
+/* Hide element with class 'hidden' */
+.hidden {
+  visibility: hidden;
 }

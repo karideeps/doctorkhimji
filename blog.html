@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style-grid.css">
     <title>Blog | Dr. Khimji</title>
   </head>
-  <body>
-    <!-- Navigation bar -->
+  <body class="blog-index">
     <header>
-      <a href="index.html">doctorkhimji.com</a>
-      <nav>
+      <h1>
+        <a href="index.html">doctorkhimji.com</a>
+      </h1>
+      <nav class="header-nav-main">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="blog.html" class="active">Blog</a></li>
-          <li><a href="index.html#contact-form">Contact Us</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="/index.html#contact-form">Contact Us</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- Blog List -->
-    <section id="blog-list">
+    <main>
       <h2>Blog Posts</h2>
 
       <form action="#" method="POST">
@@ -29,11 +30,12 @@
         <button type="submit">Sign up</button>
       </form>
 
-      <div class="blog-posts">
+      <section class="section-blog-page-articles">
+
         <article>
-          <a href="/blog-posts/what-is-lifestyle-medicine.html">
-            <img src="/assets/images/blog-posts/what-is-lifestyle-medicine-feature.jpg" width="400">
-            <h3>What is lifestyle medicine?</h3>
+          <a href="/blog-posts/nutrition-the-first-pillar-of-lifestyle-medicine.html">
+            <img src="/assets/images/blog-posts/nutrition-the-first-pillar-of-lifestyle-medicine-feature.jpg" width="400">
+            <h3>Nutrition: The first pillar of lifestyle medicine</h3>
           </a>
         </article>
 
@@ -45,13 +47,30 @@
         </article>
 
         <article>
-          <a href="/blog-posts/nutrition-the-first-pillar-of-lifestyle-medicine.html">
-            <img src="/assets/images/blog-posts/nutrition-the-first-pillar-of-lifestyle-medicine-feature.jpg" width="400">
-            <h3>Nutrition: The first pillar of lifestyle medicine</h3>
+          <a href="/blog-posts/what-is-lifestyle-medicine.html">
+            <img src="/assets/images/blog-posts/what-is-lifestyle-medicine-feature.jpg" width="400">
+            <h3>What is lifestyle medicine?</h3>
           </a>
         </article>
-      </div>
-        <!-- Form to sign up for blog post reminders -->
-    </section>
+      </section>
+    </main>
+
+    <footer>
+      <nav class="footer-nav-social">
+        <ul>
+          <li><a href="https://www.instagram.com/doctorkhimji">Instagram</a></li>
+          <li><a href="https://www.ticktok.com/doctorkhimji">Tiktok</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-nav-main">
+        <ul>
+          <li><a href="/index.html#">Home</a></li> <!-- Top of home page -->
+          <li><a href="/blog.html">Blog</a></li>
+          <li><a href="/index.html#contact-form">Contact Us</a></li>
+        </ul>
+      </nav>
+      <p>© 2024 Doctor Khimji. All rights reserved.</p>
+    </footer>
   </body>
 </html>
