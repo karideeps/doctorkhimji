@@ -44,10 +44,21 @@ table {
 }
 /* Eric Meyer's reset end. */
 
-/* Border to visualize containers */
-header, h1, nav, p, footer, section {
-  border: 1px solid black;
+/* Border Box for all elements */
+html {
+  box-sizing: border-box;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Border to visualize containers */
+/* header, h1, nav, p, footer, section {
+  border: 1px solid black;
+} */
 
 /* Enable smooth scrolling */
 html {
@@ -69,7 +80,7 @@ body {
 header {
   grid-area: header;
   display: grid;
-  grid-template-columns: 1fr minmax(0px, 1024px) 1fr;
+  grid-template-columns: 1fr minmax(0px, 1600px) 1fr; /* Width arbitrarily chosen */
   align-items: center;
   grid-template-areas:
     ". content ."
@@ -127,65 +138,85 @@ footer p {
   align-self: top;
 }
 
-/* Global main styles */
+/* Global styles */
+
+html {
+  font-family: sans-serif;
+}
 
 main {
   grid-area: main;
 }
 
+.button {
+  display: inline-block; /* Make it behave like a block but stay inline */
+  padding: 10px 20px; /* Add padding for spacing around the text */
+  background-color: #007bff;
+  color: white;
+  font-size: 1.25em;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
+}
+
 /* Homepage main */
 .home main {
   display: grid;
-  grid-template-rows: repeat(10, auto);
-  grid-template-columns: 1fr minmax(0px, 728px) 1fr;
+  grid-template-rows: 100vh auto auto;
+  grid-template-columns: 1fr minmax(0px, 1600px) 1fr;
   grid-template-areas:
-    ". introduction ."
-    ". certifications ."
-    ". bio ."
-    ". homepage-blog ."
-    ". instagram-feed ."
-    ". work-with-me ."
-    ". contact-form .";
-  place-items: center;
+    ". home-hero ."
+    ". home-lifestyle ."
+    ". home-blog .";
 }
 
-/* Introduction section */
-.section-introduction {
-  grid-area: introduction;
+/* Homepage hero */
+.home-hero {
+  grid-area: home-hero;
   display: grid;
-  place-items: center;
+  grid-template-columns: 1.5fr 1fr;
+  align-items: center;
+  gap: 100px;
 }
 
-.section-introduction figure {
-  text-align: center;
+.hero-description {
+  justify-self: end;
 }
 
-/* Certifications section */
-.section-certifications {
-  grid-area: certifications;
-  display: grid;
-  grid-template-rows: auto 75px;
-  grid-template-columns: auto auto auto;
-  grid-template-areas:
-    "heading heading heading"
-    "logo1 logo2 logo3";
-  place-items: center;
-  column-gap: 20px;
+.hero-description h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
 }
 
-.section-certifications h2 {
-  grid-area: heading;
+.hero-description p {
+  font-size: 1.25em;
+  margin-bottom: 0.75em;
 }
 
-/* Bio section */
-.section-bio {
-  grid-area: bio;
-  text-align: center;
+.hero-description .certifications {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2em;
 }
 
-/* Blog section */
-.section-homepage-blog {
-  grid-area: homepage-blog;
+.home-hero > figure img {
+  border-radius: 20px;
+}
+
+/* Homepage lifestyle */
+.home-lifestyle {
+  grid-area: home-lifestyle;
+}
+
+/* Homepage blog */
+.home-blog {
+  grid-area: home-blog;
   display: grid;
   grid-template-rows: 25px 300px 300px 25px 50px;
   grid-template-columns: auto auto;
@@ -198,43 +229,22 @@ main {
   gap: 20px;
 }
 
-.section-homepage-blog h2 {
+.home-blog h2 {
   grid-area: heading;
 }
 
-.section-homepage-blog p {
+.home-blog p {
   grid-area: allposts;
 }
 
-.section-homepage-blog form {
+.home-blog form {
   grid-area: form;
 }
 
-.section-homepage-blog {
+.home-blog {
   text-align: center;
 }
 
-/* Instagram feed section */
-.section-instagram-feed {
-  grid-area: instagram-feed;
-}
-
-/* Work with me section */
-.section-work-with-me {
-  grid-area: work-with-me;
-}
-
-/* Contact Us section */
-.section-contact-form {
-  grid-area: contact-form;
-  display: grid;
-  text-align: center;
-}
-
-.section-contact-form form {
-  display: grid;
-  place-items: center;
-}
 
 /* Blog page main */
 .blog-index main {
