@@ -74,6 +74,7 @@ body {
     "header"
     "main"
     "footer";
+  grid-gap: 20px;
 }
 
 /* Header */
@@ -169,7 +170,7 @@ main {
 .home main {
   display: grid;
   grid-template-rows: 100vh auto auto;
-  grid-template-columns: 1fr minmax(0px, 1600px) 1fr;
+  grid-template-columns: 1fr minmax(350px, 1600px) 1fr;
   grid-template-areas:
     ". home-hero ."
     ". home-lifestyle ."
@@ -189,7 +190,7 @@ main {
   justify-self: end;
 }
 
-.hero-description h1 {
+.hero-description h2 {
   font-size: 3em;
   margin-bottom: 0.5em;
 }
@@ -212,40 +213,35 @@ main {
 /* Homepage lifestyle */
 .home-lifestyle {
   grid-area: home-lifestyle;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+  gap: 100px;
 }
 
 /* Homepage blog */
 .home-blog {
   grid-area: home-blog;
   display: grid;
-  grid-template-rows: 25px 300px 300px 25px 50px;
-  grid-template-columns: auto auto;
-  grid-template-areas:
-    "heading heading"
-    "article1 article2"
-    "article3 article4"
-    "allposts allposts"
-    "form form";
+  place-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.home-blog ul {
+  display: grid;
+  grid-auto-flow: column;
+  min-width: 350px;
   gap: 20px;
 }
 
-.home-blog h2 {
-  grid-area: heading;
-}
-
-.home-blog p {
-  grid-area: allposts;
-}
-
-.home-blog form {
-  grid-area: form;
-}
-
-.home-blog {
-  text-align: center;
-}
 
 
+
+
+
+
+/* Do later */
 /* Blog page main */
 .blog-index main {
   display: grid;
