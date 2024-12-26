@@ -84,7 +84,12 @@ header {
   grid-template-columns: 1fr minmax(0px, 1600px) 1fr; /* Width arbitrarily chosen */
   align-items: center;
   grid-template-areas:
-    ". content ."
+    ". content .";
+  font-size: 1.25em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: white;
 }
 
 header h1 {
@@ -169,19 +174,13 @@ main {
 /* Homepage main */
 .home main {
   display: grid;
-  grid-template-rows: 100vh auto auto;
-  grid-template-columns: 1fr minmax(350px, 1600px) 1fr;
-  grid-template-areas:
-    ". home-hero ."
-    ". home-lifestyle ."
-    ". home-blog .";
+  grid-template-rows: calc(100vh - 4rem) 100vh calc(100vh - 10rem);
 }
 
 /* Homepage hero */
 .home-hero {
-  grid-area: home-hero;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1.25fr 1fr;
   align-items: center;
   gap: 100px;
 }
@@ -208,33 +207,77 @@ main {
 
 .home-hero > figure img {
   border-radius: 20px;
+  height: 600px;
 }
 
 /* Homepage lifestyle */
 .home-lifestyle {
-  grid-area: home-lifestyle;
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1.25fr;
   align-items: center;
   gap: 100px;
+  background-color: rgba(77, 250, 218, 0.2);
+}
+
+.home-lifestyle figure {
+  justify-self: end;
+}
+
+.lifestyle-description h2 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+.lifestyle-description dt {
+  font-size: 2em;
+  display: list-item;
+  list-style-position: inside;
+}
+
+.lifestyle-description dd {
+  font-size: 1.25em;
+  margin-left: 44px;
+  margin-bottom: 1em;
+  margin-top: 0.5em;
+  margin-right: 15em;
 }
 
 /* Homepage blog */
 .home-blog {
-  grid-area: home-blog;
   display: grid;
   place-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  grid-template-areas:
+    "title"
+    "articles"
+    "other";
+  background-color: rgb(177 39 232 / 0.2);
+  font-size: 1.25em;
+}
+
+.home-blog h2 {
+  font-size: 3em;
 }
 
 .home-blog ul {
   display: grid;
   grid-auto-flow: column;
   min-width: 350px;
-  gap: 20px;
+  gap: 100px;
 }
 
+.home-blog h3 {
+  text-align: center;
+}
+
+.home-blog p {
+  align-self: start;
+  grid-area:other;
+}
+
+.home-blog form {
+  grid-area: other;
+  align-self: center;
+}
 
 
 
