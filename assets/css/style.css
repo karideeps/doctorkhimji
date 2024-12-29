@@ -1,232 +1,184 @@
-body, section, figure, h1, h2, p, ul, ol, form, dl, dd, dt, #certification-logos, .navigation {
-  border: 1px solid #ccc;
+/* Eric Meyer's reset start. */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* font-size: 100%; */
+  font: inherit;
+  vertical-align: baseline;
 }
-
-/* h2 {
-  display: none;
-} */
-
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
 body {
-  max-width: 1024px;
-  margin: 0 auto;
-  font-size: 1.25rem;
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Eric Meyer's reset end. */
+
+/* Border Box for all elements */
+html {
+  box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Enable smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 16px; /* 1280 x 720 */
+}
+
+/* Grid layout for body */
+body {
+  display: grid;
+  place-items: center;
+}
+
+/* Header */
 header {
   position: sticky;
   top: 0;
-  z-index: 1000;
-  background-color: #6a4c9c;
-  padding: 20px 0;
-  padding-right: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  z-index: 10;
+  background-color: white;
+  width: 100vw;
 }
 
-header > a {
-  margin-left: 20px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-header nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-header nav ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition:
-    background-color 0.3s,
-    color: 0.3s;
-}
-
-header nav ul li.logo a {
-  font-size: 24px;
-}
-
-header nav ul li a:hover {
-  background-color: #f4e05d;
-  border-radius: 5px;
-  color: #5e4b8b;
-}
-
-header nav ul li a.active {
-  background-color: #f4e05d;
-  border-radius: 5px;
-  color: #5e4b8b;
-}
-
-figure {
-  margin: 0;
-}
-
-#introduction figure {
-  display: flex;
-  flex-direction: column;
+/* Used so that header's background color can span the whole length of the page */
+.header-content {
+  width: 1200px;  /* 1280 x 720 */
+  height: 40px;   /* 1280 x 720 */
+  margin: auto;
+  display: grid;
+  grid-auto-flow: column;
   align-items: center;
+  font-size: 20px;    /* 1280 x 720 */
 }
 
-#certifications {
-  display: flex;
-  flex-direction: column;
+header h1 {
+  justify-self: left;
+}
+
+header nav {
+  justify-self: right;
+}
+
+.header-nav-main li {
+  display: inline-block; /* Header navigation list items on the same line */
+}
+
+.home main {
+  display: grid;
+  width: 100vw;
+}
+
+
+/* Homepage hero section */
+.hero {
+  height: calc(100vh - 40px); /* minus header height @ 1280 x 720 */
+  display: grid;
+  grid-auto-flow: column;
   align-items: center;
+  gap: 100px;
 }
 
-#certification-logos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
+.hero-description {
+  max-width: 600px;   /* 1280 x 720 */
+  justify-self: end;
 }
 
-h1, h2 {
-  text-align: center;
+.hero-description h2 {
+  font-size: 48px;    /* 1280 x 720 */
+  margin-bottom: 32px;  /* 1280 x 720 */
+  font-weight: bold;
 }
 
-/*
-  Below is to make it so that the user does not need to move their eyes too much horizontally when reading.
-*/
-p {
-  max-width: 768px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
+.hero-description p {
+  font-size: 20px;    /* 1280 x 720 */
+  margin-bottom: 20px; /* 1280 x 720 */
 }
 
-ol {
-  max-width: 768px;
-  margin: 0 auto;
-  list-style-position: inside;
-  box-sizing: border-box;
-}
-
-.latest-blog-posts {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-article h3 {
-  max-width: 400px;
-  text-align: center;
-}
-
-#homepage-blog p {
-  text-align: center;
-}
-
-/*
-  Meant for blog sign up forms on main page and blog page
-*/
-
-form {
-  text-align: center;
-  margin: 10px;
-}
-
-/*
-  Below is to center the instagram feed.
-  The blockqoute somehow gets converted into an i-frame.
-*/
-iframe {
-  margin: auto !important;
-}
-
-/*
-  Center map in the middle of the middle of the Work With Me section.
-*/
-#work-with-me {
-  display: flex;
-  flex-direction: column;
-}
-
-#contact-form form {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  gap: 5px;
-}
-
-#contact-form form input {
-  margin: auto;
-  max-width: 350px;
-  width: 100%;
-}
-
-#contact-form form textarea {
-  margin: auto;
-  max-width: 350px;
-  width: 100%;
-}
-
-#contact-form button {
-  padding: 10px;
-  width: 75px;
-  margin: auto;
-}
-
-/* blog.html styling */
-
-.blog-posts {
+.hero-description .certifications {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-top: 32px; /* 1280 x 720 */
 }
 
-/* Center image(s) in each blog post */
-
-article img {
-  display: block; 
-  margin: auto;
+.hero-description .certifications img {
+  width: 200px; /* to stay within width of section (600px) */
 }
 
-/* Navigation styling for each blog post */
-.navigation {
-  box-sizing: border-box;
-  max-width: 768px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+.hero > figure img {
+  width: 400px; /* 1280 x 720 */
+  border-radius: 20px;
 }
 
-
-.navigation a {
-  padding: 20px 10px;
-  background-color: lightpink;
-  border-radius: 5px;
-  text-align: center;
-}
-
-
-/* Hide previous button on the first blog post */
-.hidden {
-  visibility: hidden;
-}
-
-/* Footer */
-
-footer {
+/* Homepage lifestyle section */
+.lifestyle {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 100px;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 100px;
+  background-color: rgba(77, 250, 218, 0.2);
+  height: 100vh;
 }
 
-footer ul {
-  list-style: none;
+.lifestyle-description {
+  max-width: 600px;
 }
 
-.footer-nav-social li {
-  display: inline-block; /* Social Media links on the same line */
+.lifestyle-description h2 {
+  font-size: 48px;    /* 1280 x 720 */
+  margin-bottom: 32px;  /* 1280 x 720 */
+  font-weight: bold;
+}
+
+.lifestyle-description dt {
+  font-size: 32px; /* 1280 x 720 */
+}
+
+.lifestyle-description dd {
+  font-size: 16px; /* 1280 x 720 */
+  margin-bottom: 16px; /* 1280 x 720 */
+}
+
+.lifestyle figure {
+  justify-self: end;
 }

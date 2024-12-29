@@ -15,7 +15,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  /* font-size: 100%; */
   font: inherit;
   vertical-align: baseline;
 }
@@ -65,11 +65,15 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Base font-size for 1280 x 720 */
+html {
+  font-size: 16px;
+}
+
 /* Grid layout for body */
 body {
   display: grid;
-  grid-template-rows: 4rem auto 6rem;
-  grid-template-columns: auto;
+  grid-template-rows: auto 1fr auto;
   grid-template-areas: 
     "header"
     "main"
@@ -81,7 +85,7 @@ body {
 header {
   grid-area: header;
   display: grid;
-  grid-template-columns: 1fr minmax(0px, 1600px) 1fr; /* Width arbitrarily chosen */
+  grid-template-columns: 1fr 1280px 1fr;
   align-items: center;
   grid-template-areas:
     ". content .";
@@ -159,7 +163,7 @@ main {
   padding: 10px 20px; /* Add padding for spacing around the text */
   background-color: #007bff;
   color: white;
-  font-size: 1.25em;
+  /* font-size: 1.25em; */
   text-decoration: none;
   border: none;
   border-radius: 5px;
@@ -174,7 +178,6 @@ main {
 /* Homepage main */
 .home main {
   display: grid;
-  grid-template-rows: calc(100vh - 4rem) 100vh calc(100vh - 10rem);
 }
 
 /* Homepage hero */
@@ -183,6 +186,7 @@ main {
   grid-template-columns: 1.25fr 1fr;
   align-items: center;
   gap: 100px;
+  height: 100vh;
 }
 
 .hero-description {
@@ -190,12 +194,12 @@ main {
 }
 
 .hero-description h2 {
-  font-size: 3em;
+  /* font-size: 3em; */
   margin-bottom: 0.5em;
 }
 
 .hero-description p {
-  font-size: 1.25em;
+  /* font-size: 1.25em; */
   margin-bottom: 0.75em;
 }
 
@@ -208,6 +212,7 @@ main {
 .home-hero > figure img {
   border-radius: 20px;
   height: 600px;
+  display: block;
 }
 
 /* Homepage lifestyle */
@@ -217,6 +222,7 @@ main {
   align-items: center;
   gap: 100px;
   background-color: rgba(77, 250, 218, 0.2);
+  height: 100vh;
 }
 
 .home-lifestyle figure {
@@ -224,18 +230,18 @@ main {
 }
 
 .lifestyle-description h2 {
-  font-size: 3em;
+  /* font-size: 3em; */
   margin-bottom: 0.5em;
 }
 
 .lifestyle-description dt {
-  font-size: 2em;
+  /* font-size: 2em; */
   display: list-item;
   list-style-position: inside;
 }
 
 .lifestyle-description dd {
-  font-size: 1.25em;
+  /* font-size: 1.25em; */
   margin-left: 44px;
   margin-bottom: 1em;
   margin-top: 0.5em;
@@ -251,11 +257,12 @@ main {
     "articles"
     "other";
   background-color: rgb(177 39 232 / 0.2);
-  font-size: 1.25em;
+  /* font-size: 1.25em; */
+  height: calc(100vh - 10rem);
 }
 
 .home-blog h2 {
-  font-size: 3em;
+  /* font-size: 3em; */
 }
 
 .home-blog ul {
