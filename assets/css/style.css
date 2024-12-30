@@ -108,6 +108,41 @@ header nav {
   width: 100vw;
 }
 
+/* Footer */
+footer {
+  display: grid;
+  height: 90px;
+  grid-template-rows: 2fr 2fr;
+  grid-template-columns: 1fr 600px 1fr;      /* 1280 x 720 */
+  align-items: center;
+  grid-template-areas:
+    ". content ."
+    ". copyright ."
+}
+
+footer nav {
+  grid-area: content;
+}
+
+.footer-nav-social {
+  justify-self: left;
+  margin-left: 50px;
+}
+
+.footer-nav-social li {
+  display: inline-block; /* Footer social links on the same line */
+}
+
+.footer-nav-main {
+  justify-self: right;
+  margin-right: 50px;
+}
+
+footer p {
+  grid-area: copyright;
+  justify-self: center;
+  align-self: top;
+}
 
 /* Homepage hero section */
 .hero {
@@ -181,4 +216,120 @@ header nav {
 
 .lifestyle figure {
   justify-self: end;
+}
+
+.lifestyle figure img {
+  width: 400px;
+  border-radius: 20px;
+}
+
+/* Homepage obesity section */
+.obesity {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 100px;
+  height: 100vh;
+}
+
+.obesity-description {
+  max-width: 600px;  /* 1280 x 720 */
+  order: -1;
+  justify-self: end;
+}
+
+.obesity-description h2 {
+  font-size: 48px;    /* 1280 x 720 */
+  margin-bottom: 32px;  /* 1280 x 720 */
+  font-weight: bold;
+}
+
+.obesity-description dt {
+  font-size: 32px; /* 1280 x 720 */
+}
+
+.obesity-description dd {
+  font-size: 16px; /* 1280 x 720 */
+  margin-bottom: 16px; /* 1280 x 720 */
+}
+
+.obesity figure img {
+  width: 400px;
+  border-radius: 20px;
+}
+
+/* Homepage blog */
+.blog-preview {
+  display: grid;
+  place-items: center;
+  align-content: start;
+  background-color: rgba(77, 250, 218, 0.2);
+  height: calc(100vh - 130px); /* minus header and footer */ /* 1280 x 720 */
+}
+
+.blog-preview h2 {
+  font-size: 48px;    /* 1280 x 720 */
+  font-weight: bold;
+  margin-top: 20px;      /* 1280 x 720 */
+  margin-bottom: 20px;      /* 1280 x 720 */
+}
+
+.blog-preview ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;      /* 1280 x 720 */
+  margin-bottom: 20px;      /* 1280 x 720 */
+}
+
+.blog-preview article {
+  text-align: center;
+}
+
+.blog-preview img {
+  width: 250px;      /* 1280 x 720 */
+  border-radius: 20px;
+}
+
+/* So image renders properly on bigger screens */
+@media (min-width: 1601px) {
+  .blog-preview img {
+    width: 400px;
+  }
+}
+
+.blog-preview > p {
+  margin-bottom: 20px;      /* 1280 x 720 */
+}
+
+/* Blog page */
+.blog main {
+  display: grid;
+  place-items: center;
+  row-gap: 20px;
+}
+
+.blog h2 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.section-blog-page-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.blog article {
+  text-align: center;
+}
+
+.blog img {
+  width: 400px;
+  border-radius: 20px;
+}
+
+/* Resources Page */
+.resources h2 {
+  font-size: 48px;      /* 1280 x 720 */
+  font-weight: bold;
 }

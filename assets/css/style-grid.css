@@ -293,7 +293,7 @@ main {
 
 /* Do later */
 /* Blog page main */
-.blog-index main {
+.blog main {
   display: grid;
   grid-template-columns: 1fr minmax(0px, 728px) 1fr;
   grid-template-rows: auto auto auto;
@@ -304,11 +304,11 @@ main {
   place-items: center;
 }
 
-.blog-index h2 {
+.blog h2 {
   grid-area: title;
 }
 
-.blog-index form {
+.blog form {
   grid-area: form;
 }
 
@@ -319,7 +319,7 @@ main {
   gap: 20px;
 }
 
-.blog-index h3 {
+.blog h3 {
   text-align: center;
 }
 
