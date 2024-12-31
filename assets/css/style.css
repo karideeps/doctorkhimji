@@ -365,6 +365,10 @@ footer p {
   justify-self: center;
 }
 
+.blog-post main article figure img {
+  width: 400px; /* 1280 x 720 */
+}
+
 .blog-post main article ol {
   list-style-type: decimal;
   list-style-position: inside;
@@ -595,6 +599,10 @@ footer p {
     gap: 50px;
   }
 
+  .blog img {
+    width: 500px;
+  }
+
   /* Individual blog post */
   .blog-post main {
     gap: 24px;
@@ -604,6 +612,10 @@ footer p {
     width: 1200px;
     gap: 24px;
     font-size: 24px;
+  }
+
+  .blog-post main article figure img {
+    width: 600px;
   }
 
   .blog-post main nav {
@@ -799,6 +811,10 @@ footer p {
     gap: 60px;
   }
 
+  .blog img {
+    width: 600px;
+  }
+
   /* Individual blog post */
   .blog-post main {
     gap: 24px;
@@ -808,6 +824,10 @@ footer p {
     width: 1200px;
     gap: 24px;
     font-size: 30px;
+  }
+
+  .blog-post main article figure img {
+    width: 800px;
   }
 
   .blog-post main nav {
