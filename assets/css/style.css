@@ -117,7 +117,8 @@ footer {
   align-items: center;
   grid-template-areas:
     ". content ."
-    ". copyright ."
+    ". copyright .";
+  font-size: 16px;          /* 1280 x 720 */
 }
 
 footer nav {
@@ -328,8 +329,117 @@ footer p {
   border-radius: 20px;
 }
 
+/* Individual blog post */
+.blog-post main {
+  display: grid;
+  gap: 20px;
+}
+
+.blog-post main article {
+  display: grid;
+  width: 1024px;    /* 1280 x 720 */
+  gap: 20px;
+  font-size: 20px;         /* 1280 x 720 */
+}
+
+.blog-post main article h1 {
+  justify-self: center;
+  font-size: 32px;    /* 1280 x 720 */
+  font-weight: bold;
+}
+
+.blog-post main article figure {
+  justify-self: center;
+}
+
+.blog-post main article ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+.blog-post main nav {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+.blog-post main nav {
+  font-size: 20px;
+  margin-bottom: 40px; /* to separate from footer */
+}
+
+.blog-post main nav a:first-child {
+  margin-left: 30px;
+}
+
+.blog-post main nav a:last-child {
+  justify-self: end;
+  margin-right: 30px;
+}
+
+/* About Page */
+.about main {
+  display: grid;
+  width: 1024px;      /* 1280 x 720 */
+  gap: 32px;
+}
+
+.about main h2 {
+  font-size: 32px;      /* 1280 x 720 */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.about main p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.work-with-me {
+  display: grid;
+  place-items: center;
+}
+
+.instagram-feed {
+  display: grid;
+  place-items: center;
+}
+
+.contact-form {
+  height: calc(100vh - 130px); /* minus header and footer */ /* 1280 x 720 */
+}
+
+.contact-form form {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+}
+
 /* Resources Page */
 .resources h2 {
   font-size: 48px;      /* 1280 x 720 */
   font-weight: bold;
+}
+
+/* Global styles */
+.hidden {
+  visibility: hidden;
+}
+
+.button {
+  display: inline-block; /* Make it behave like a block but stay inline */
+  padding: 10px 20px; /* Add padding for spacing around the text */
+  background-color: #007bff;
+  color: white;
+  /* font-size: 1.25em; */
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer; /* Change the cursor to a pointer on hover */
+  max-width: 300px;
+}
+
+.button:hover {
+  background-color: #0056b3; /* Darker shade for hover effect */
 }
