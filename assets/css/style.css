@@ -80,6 +80,10 @@ header {
   width: 100vw;
 }
 
+header a {
+  text-decoration: none;
+}
+
 /* Used so that header's background color can span the whole length of the page */
 .header-content {
   width: 1200px;  /* 1280 x 720 */
@@ -101,17 +105,13 @@ header nav {
 
 .header-nav-main li {
   display: inline-block; /* Header navigation list items on the same line */
-}
-
-.home main {
-  display: grid;
-  width: 100vw;
+  margin-right: 20px;
 }
 
 /* Footer */
 footer {
   display: grid;
-  height: 90px;
+  height: 90px;      /* 1280 x 720 */
   grid-template-rows: 2fr 2fr;
   grid-template-columns: 1fr 600px 1fr;      /* 1280 x 720 */
   align-items: center;
@@ -119,6 +119,10 @@ footer {
     ". content ."
     ". copyright .";
   font-size: 16px;          /* 1280 x 720 */
+}
+
+footer a {
+  text-decoration: none;
 }
 
 footer nav {
@@ -145,13 +149,19 @@ footer p {
   align-self: top;
 }
 
+/* Homepage */
+.home main {
+  display: grid;
+  width: 100vw;
+}
+
 /* Homepage hero section */
 .hero {
   height: calc(100vh - 40px); /* minus header height @ 1280 x 720 */
   display: grid;
   grid-auto-flow: column;
   align-items: center;
-  gap: 100px;
+  gap: 100px;   /* 1280 x 720 */
 }
 
 .hero-description {
@@ -161,7 +171,7 @@ footer p {
 
 .hero-description h2 {
   font-size: 48px;    /* 1280 x 720 */
-  margin-bottom: 32px;  /* 1280 x 720 */
+  margin-bottom: 48px;  /* 1280 x 720 */
   font-weight: bold;
 }
 
@@ -197,7 +207,7 @@ footer p {
 }
 
 .lifestyle-description {
-  max-width: 600px;
+  max-width: 600px;    /* 1280 x 720 */
 }
 
 .lifestyle-description h2 {
@@ -220,7 +230,7 @@ footer p {
 }
 
 .lifestyle figure img {
-  width: 400px;
+  width: 400px; /* 1280 x 720 */
   border-radius: 20px;
 }
 
@@ -234,14 +244,14 @@ footer p {
 }
 
 .obesity-description {
-  max-width: 600px;  /* 1280 x 720 */
+  width: 600px;  /* 1280 x 720 */
   order: -1;
   justify-self: end;
 }
 
 .obesity-description h2 {
   font-size: 48px;    /* 1280 x 720 */
-  margin-bottom: 32px;  /* 1280 x 720 */
+  margin-bottom: 48px;  /* 1280 x 720 */
   font-weight: bold;
 }
 
@@ -255,7 +265,7 @@ footer p {
 }
 
 .obesity figure img {
-  width: 400px;
+  width: 400px; /* 1280 x 720 */
   border-radius: 20px;
 }
 
@@ -271,8 +281,12 @@ footer p {
 .blog-preview h2 {
   font-size: 48px;    /* 1280 x 720 */
   font-weight: bold;
-  margin-top: 20px;      /* 1280 x 720 */
-  margin-bottom: 20px;      /* 1280 x 720 */
+  margin-top: 16px; /* 1280 x 720 */
+  margin-bottom: 24px; /* 1280 x 720 */
+}
+
+.blog-preview h3 {
+  font-size: 20px; /* 1280 x 720 */
 }
 
 .blog-preview ul {
@@ -291,33 +305,32 @@ footer p {
   border-radius: 20px;
 }
 
-/* So image renders properly on bigger screens */
-@media (min-width: 1601px) {
-  .blog-preview img {
-    width: 400px;
-  }
-}
-
 .blog-preview > p {
   margin-bottom: 20px;      /* 1280 x 720 */
 }
+
+.blog-preview input::placeholder {
+  font-size: 16px; /* 1280 x 720 */
+} 
 
 /* Blog page */
 .blog main {
   display: grid;
   place-items: center;
   row-gap: 20px;
+  min-height: calc(100vh - 130px); /* 1280 x 720 */ /*minus header and footer */
+  align-content: start;
 }
 
 .blog h2 {
-  font-size: 48px;
+  font-size: 48px; /* 1280 x 720 */
   font-weight: bold;
 }
 
-.section-blog-page-posts {
+.blog-page-posts {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 20px;  /* 1280 x 720 */
 }
 
 .blog article {
@@ -332,19 +345,19 @@ footer p {
 /* Individual blog post */
 .blog-post main {
   display: grid;
-  gap: 20px;
+  gap: 20px; /* 1280 x 720 */
 }
 
 .blog-post main article {
   display: grid;
-  width: 1024px;    /* 1280 x 720 */
-  gap: 20px;
-  font-size: 20px;         /* 1280 x 720 */
+  width: 1024px; /* 1280 x 720 */
+  gap: 20px; /* 1280 x 720 */
+  font-size: 20px; /* 1280 x 720 */
 }
 
 .blog-post main article h1 {
   justify-self: center;
-  font-size: 32px;    /* 1280 x 720 */
+  font-size: 32px; /* 1280 x 720 */
   font-weight: bold;
 }
 
@@ -363,7 +376,7 @@ footer p {
 }
 
 .blog-post main nav {
-  font-size: 20px;
+  font-size: 20px; /* 1280 x 720 */
   margin-bottom: 40px; /* to separate from footer */
 }
 
@@ -379,20 +392,20 @@ footer p {
 /* About Page */
 .about main {
   display: grid;
-  width: 1024px;      /* 1280 x 720 */
+  width: 1024px; /* 1280 x 720 */
   gap: 32px;
 }
 
 .about main h2 {
-  font-size: 32px;      /* 1280 x 720 */
+  font-size: 48px; /* 1280 x 720 */
   font-weight: bold;
   text-align: center;
   margin-bottom: 16px;
 }
 
 .about main p {
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 20px; /* 1280 x 720 */
+  margin-bottom: 20px; /* 1280 x 720 */
 }
 
 .work-with-me {
@@ -417,7 +430,7 @@ footer p {
 
 /* Resources Page */
 .resources h2 {
-  font-size: 48px;      /* 1280 x 720 */
+  font-size: 48px; /* 1280 x 720 */
   font-weight: bold;
 }
 
@@ -427,19 +440,419 @@ footer p {
 }
 
 .button {
-  display: inline-block; /* Make it behave like a block but stay inline */
-  padding: 10px 20px; /* Add padding for spacing around the text */
+  display: inline-block;
+  padding: 10px 20px;
   background-color: #007bff;
   color: white;
-  /* font-size: 1.25em; */
   text-decoration: none;
   border: none;
   border-radius: 5px;
   font-weight: bold;
-  cursor: pointer; /* Change the cursor to a pointer on hover */
-  max-width: 300px;
+  cursor: pointer;
+  max-width: 300px; /* 1280 x 720 */
 }
 
 .button:hover {
-  background-color: #0056b3; /* Darker shade for hover effect */
+  background-color: #0056b3;
+}
+
+/* For 1920 and up */
+@media (min-width: 1920px) {
+  html {
+    font-size: 20px;
+  }
+
+  /* header */
+  .header-content {
+    width: 1600px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  /* footer */
+  footer {
+    height: 120px;
+    grid-template-columns: 1fr 800px 1fr;
+    font-size: 18px;
+  }
+
+  /* Homepage */
+  .hero {
+    height: calc(100vh - 60px); /* minus header height */
+    gap: 120px;
+  }
+
+  .hero-description {
+    max-width: 800px;
+  }
+
+  .hero-description h2 {
+    font-size: 60px;
+    margin-bottom: 60px;
+  }
+
+  .hero-description p {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .hero-description .certifications img {
+    width: 250px;
+  }
+
+  .hero > figure img {
+    width: 500px;
+  }
+
+  .lifestyle-description {
+    max-width: 800px;
+  }
+
+  .lifestyle-description h2 {
+    font-size: 60px;
+    margin-bottom: 60px;
+  }
+
+  .lifestyle-description dt {
+    font-size: 48px;
+  }
+
+  .lifestyle-description dd {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .lifestyle figure img {
+    width: 500px;
+  }
+
+  .obesity-description {
+    width: 800px;
+  }
+
+  .obesity-description h2 {
+    font-size: 60px;
+    margin-bottom: 60px;
+  }
+
+  .obesity-description dt {
+    font-size: 32px;
+  }
+
+  .obesity-description dd {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .obesity figure img {
+    width: 500px;
+  }
+
+  .blog-preview {
+    height: calc(100vh - 180px);  /* minus header and footer */
+  }
+
+  .blog-preview h2 {
+    font-size: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .blog-preview h3 {
+    font-size: 24px;
+  }
+
+  .blog-preview ul {
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+
+  .blog-preview img {
+    width: 400px;
+  }
+
+  .blog-preview > p {
+    margin-bottom: 20px;
+  }
+
+  .blog-preview input {
+    height: 24px;
+  }
+  .blog-preview input::placeholder {
+    font-size: 20px;
+  } 
+
+  /* Blog page */
+  .blog main {
+    min-height: calc(100vh - 180px);
+  }
+
+  .blog h2 {
+    font-size: 60px;
+  }
+
+  .blog-page-posts {
+    gap: 50px;
+  }
+
+  /* Individual blog post */
+  .blog-post main {
+    gap: 24px;
+  }
+
+  .blog-post main article {
+    width: 1200px;
+    gap: 24px;
+    font-size: 24px;
+  }
+
+  .blog-post main nav {
+    font-size: 24px;
+  }
+
+  /* About page */
+  .about main {
+    width: 1200px;
+  }
+
+  .about main h2 {
+    font-size: 60px;
+  }
+
+  .about main p {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .contact-form {
+    height: calc(100vh - 180px);
+  }
+
+  /* Resources page */
+  .resources h2 {
+    font-size: 60px;
+  }
+
+  /* Global styles */
+  .button {
+    max-width: 400px;
+  }
+}
+
+/* For 2560 and up */
+@media (min-width: 2560px) {
+  html {
+    font-size: 24px;
+  }
+
+  /* header */
+  .header-content {
+    width: 2000px;
+    height: 80px;
+    font-size: 32px;
+  }
+
+  /* footer */
+  footer {
+    height: 150px;
+    grid-template-columns: 1fr 1000px 1fr;
+    font-size: 24px;
+  }
+
+  /* Homepage */
+  .hero {
+    height: calc(100vh - 80px); /* minus header height */
+    gap: 160px;
+  }
+
+  .hero-description {
+    max-width: 1000px;
+  }
+
+  .hero-description h2 {
+    font-size: 80px;
+    margin-bottom: 80px;
+  }
+
+  .hero-description p {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .hero-description .certifications img {
+    width: 300px;
+  }
+
+  .hero > figure img {
+    width: 700px;
+  }
+
+  .lifestyle-description {
+    max-width: 1000px;
+  }
+
+  .lifestyle-description h2 {
+    font-size: 80px;
+    margin-bottom: 80px;
+  }
+
+  .lifestyle-description dt {
+    font-size: 60px;
+  }
+
+  .lifestyle-description dd {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .lifestyle figure img {
+    width: 700px;
+  }
+
+  .obesity-description {
+    width: 1000px;
+  }
+
+  .obesity-description h2 {
+    font-size: 80px;
+    margin-bottom: 80px;
+  }
+
+  .obesity-description dt {
+    font-size: 60px;
+  }
+
+  .obesity-description dd {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .obesity figure img {
+    width: 700px;
+  }
+
+  .blog-preview {
+    height: calc(100vh - 230px);  /* minus header and footer */
+  }
+
+  .blog-preview h2 {
+    font-size: 80px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .blog-preview h3 {
+    font-size: 30px;
+  }
+
+  .blog-preview ul {
+    gap: 70px;
+    margin-bottom: 70px;
+  }
+
+  .blog-preview img {
+    width: 500px;
+  }
+
+  .blog-preview > p {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .blog-preview input {
+    height: 36px;
+    width: 400px;
+  }
+
+  .blog-preview input::placeholder {
+    font-size: 30px;
+  } 
+
+  /* Blog page */
+  .blog main {
+    min-height: calc(100vh - 230px);
+  }
+
+  .blog h2 {
+    font-size: 80px;
+  }
+
+  .blog form {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  .blog input {
+    height: 36px;
+    width: 400px;
+  }
+
+  .blog input::placeholder {
+    font-size: 30px;
+  }
+
+  .blog h3 {
+    font-size: 30px;
+  }
+
+  .blog-page-posts {
+    gap: 60px;
+  }
+
+  /* Individual blog post */
+  .blog-post main {
+    gap: 24px;
+  }
+
+  .blog-post main article {
+    width: 1200px;
+    gap: 24px;
+    font-size: 30px;
+  }
+
+  .blog-post main nav {
+    font-size: 24px;
+  }
+
+  /* About page */
+  .about main {
+    width: 1200px;
+  }
+
+  .about main h2 {
+    font-size: 80px;
+  }
+
+  .about main p {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .contact-form {
+    height: calc(100vh - 230px);
+  }
+
+  .contact-form input {
+    height: 40px;
+    width: 300px;
+  }
+
+  .contact-form textarea {
+    height: 450px;
+    width: 400px;
+  }
+
+  .contact-form *::placeholder {
+    font-size: 24px;
+  }
+
+  /* Resources page */
+  .resources h2 {
+    font-size: 80px;
+  }
+
+  /* Global styles */
+  .button {
+    max-width: 400px;
+  }
 }
