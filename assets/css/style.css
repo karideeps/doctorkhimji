@@ -157,7 +157,7 @@ footer p {
 
 /* Homepage hero section */
 .hero {
-  height: calc(100vh - 40px); /* minus header height @ 1280 x 720 */
+  min-height: calc(100vh - 40px); /* minus header height @ 1280 x 720 */
   display: grid;
   grid-auto-flow: column;
   align-items: center;
@@ -203,7 +203,7 @@ footer p {
   align-items: center;
   gap: 100px;
   background-color: rgba(77, 250, 218, 0.2);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .lifestyle-description {
@@ -240,7 +240,7 @@ footer p {
   grid-auto-flow: column;
   align-items: center;
   gap: 100px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .obesity-description {
@@ -482,7 +482,7 @@ footer p {
 
   /* Homepage */
   .hero {
-    height: calc(100vh - 60px); /* minus header height */
+    min-height: calc(100vh - 60px); /* minus header height */
     gap: 120px;
   }
 
@@ -673,7 +673,7 @@ footer p {
 
   /* Homepage */
   .hero {
-    height: calc(100vh - 80px); /* minus header height */
+    min-height: calc(100vh - 80px); /* minus header height */
     gap: 160px;
   }
 
